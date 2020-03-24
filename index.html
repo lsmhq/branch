@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="node_modules/handsontable/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
+    <link href="./dist/handsontable.full.min.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
 
     <div id="example" style="margin-left: 37%;"></div>
     <div id="main" style="width: 600px;height:400px;margin-left: 30%;"></div>
-    <script src="./node_modules/echarts/dist/echarts.min.js"></script>
+    <script src="./dist/echarts.min.js"></script>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
         var option = {
@@ -35,7 +35,7 @@
         };
         myChart.setOption(option);
     </script>
-    <script src="node_modules/handsontable/dist/handsontable.full.min.js"></script>
+    <script src="./dist/handsontable.full.min.js"></script>
     <script>
         var data = [
             ['语言名称', '排行', '升或降', '变化幅度'],
