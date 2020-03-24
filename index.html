@@ -10,9 +10,31 @@
 
 <body>
 
-    <div id="example" style="margin-left: 30%;"></div>
-
-
+    <div id="example" style="margin-left: 37%;"></div>
+    <div id="main" style="width: 600px;height:400px;margin-left: 30%;"></div>
+    <script src="./node_modules/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+                text: 'Javascript语言排名变化'
+            },
+            tooltip: {},
+            legend: {
+                data:['排名']
+            },
+            xAxis: {
+                data: ["2000","2005","2010","2015","2020"]
+            },
+            yAxis: {},
+            series: [{
+                name: '排名',
+                type: 'line',
+                data: [6, 9, 8, 8, 7]
+            }]
+        };
+        myChart.setOption(option);
+    </script>
     <script src="node_modules/handsontable/dist/handsontable.full.min.js"></script>
     <script>
         var data = [
