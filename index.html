@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="node_modules/handsontable/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+    <div id="example" style="margin-left: 30%;"></div>
+
+
+    <script src="node_modules/handsontable/dist/handsontable.full.min.js"></script>
+    <script>
+        var data = [
+            ['语言名称', '排行', '升或降', '变化幅度'],
+            ['java', 1, '降', '-0.01%'],
+            ['c', 2, '升','+2.44%'],
+            ['python', 3, '升', +'1.41%'],
+            ['c++', 4, '降', '-2.58%'],
+            ['c#', 5, '升', '+2.07%'],
+            ['Visual Basic .NET', 6, '降', '-1.17%'],
+            ['JavaScript',7,'降','-0.85%']
+        ];
+        var container = document.getElementById('example');
+        var hot = new Handsontable(container, {
+            data: data,
+            rowHeaders: true,
+            colHeaders: true,
+            filters: false,
+            dropdownMenu: false
+        });
+    </script>
+</body>
+
+</html>
